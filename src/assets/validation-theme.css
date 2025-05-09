@@ -1,0 +1,34 @@
+/* validation-theme.css */
+.tippy-box[data-theme~='validation']{
+    background:#fff;
+    color:#333;
+    border:1px solid #e63946;
+    border-radius:4px;
+    font-size:.82rem;
+    padding:8px 12px;
+    position:relative;
+  }
+  
+  /* иконка «!» слева */
+  .tippy-box[data-theme~='validation']::before{
+    content:'⚠';
+    color:#f68720;
+    font-weight:bold;
+    margin-right:6px;
+  }
+  
+  /* стрелочка наследует фон */
+  .tippy-box[data-theme~='validation'][data-placement^='left']
+       > .tippy-arrow::before {
+        border-left-color: #e63946;         /* ← вместо border-top-color */
+}
+
+@media (max-width: 630px) {
+    .tippy-box[data-theme~='validation'] {
+      max-width: 90vw !important;   /* до 90% ширины экрана */
+      white-space: normal;          /* текст переносится */
+      font-size: .75rem;            /* чуть меньше шрифт */
+      padding: 6px 10px;            /* чуть меньше отступы */
+    }
+  }
+  

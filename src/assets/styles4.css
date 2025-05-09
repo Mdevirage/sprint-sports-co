@@ -1,0 +1,72 @@
+.about-page {
+  padding: 20px;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* Отступы вокруг селектов и полей */
+.about-page select,
+.about-page input[type="text"],
+.about-page input[type="number"] {
+  margin-left: 8px;
+}
+
+/* Сброс стилевых маркеров и отступов */
+.about-page .order-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Вертикальный список с флекс-раскладкой и равными отступами */
+.about-page .order-list li {
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.about-page .buttonplace {
+  display: flex;
+  flex-direction: column;
+}
+/* Кнопка отправки */
+.about-page button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* Сообщения об ошибке */
+.about-page .error {
+  color: #e11d48;
+  margin-top: 4px;
+}
+
+/* Сообщения об успехе */
+.about-page .success {
+  color: #16a34a;
+  margin-top: 4px;
+}
+
+/* Блок с итоговым счетом */
+.about-page .result {
+  font-weight: 500;
+  margin: 12px 0;
+}
+
+/* Глобальное поздравление */
+.about-page .overall-success {
+  color: #16a34a;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.about-page .question ul {
+  list-style: none;    
+  padding-left: 0;      
+  margin: 0;          
+}

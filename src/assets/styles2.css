@@ -1,0 +1,268 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.contact-page .wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-page main {
+  height: 70vh;
+  align-content: center;
+}
+
+.contact-page .contact {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact-page .contact h2 {
+  font-weight: normal;
+  font-size: 43px;
+  margin: 5px;
+}
+
+.contact-page .dots {
+  color: orange;
+  font-size: 30px;
+}
+
+.contact-page form {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.contact-page input,.contact-page textarea, .contact-page button{
+  font-family: Arial, sans-serif;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+  box-sizing: border-box; 
+}
+.contact-page textarea {
+  height: 100px;
+  resize: none
+}
+
+.contact-page .contact button {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 15px;
+  background-color: #f46530;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 0px; 
+}
+
+.contact-page .contact button:hover {
+  background-color: #e05520;
+}
+
+.contact-page footer{
+  max-width: 75%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-page .page-footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+  padding-bottom: 80px;
+  margin: 0 20px;
+  font-size: 13px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.contact-page .footer-left h3 {
+  font-family: 'Signika Negative';
+  font-weight: normal;
+  font-size: 21px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+
+.contact-page .error-text {
+color: #e63946;
+font-size: 0.8rem;
+margin-left: 4px;
+}
+
+.contact-page .footer-left p{
+  margin-top: 0;
+}
+
+.contact-page .footer-right {
+  flex: 1;
+  min-width: 400px;
+  text-align: right;
+}
+
+.contact-page .footer-menu {
+  margin-bottom: 30px;
+}
+
+.contact-page .footer-menu a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #444;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contact-page .footer-menu a:hover {
+  color: #f46530;
+}
+
+.contact-page .subscribe {
+  display: flex;
+  align-items: center;       
+  justify-content: flex-end;
+  height: 55px;
+}
+
+.contact-page .subscribe-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;              
+  width: 45px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.contact-page .subscribe-icon img {
+  height: 16px;              
+}
+
+.contact-page .subscribe input {
+  padding: 8px;
+  padding-left: 20px;
+  width: 230px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  height: 100%;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.contact-page .subscribe button {
+  background-color: #f46530;
+  font-size: 16px;
+  width: 130px;
+  height: 100%;
+  text-align: center;
+  border: none;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.contact-page .subscribe button:hover {
+  background-color: #e05520;
+}
+
+.contact-page .error {
+  color: red;
+  font-size: 0.8em;
+  display: block;
+}
+
+.contact-page .invalid {
+  border-color: #e63946 !important;
+}
+  
+
+@media (max-width: 700px) {
+  .contact-page main {
+  height: auto;
+  align-content: center;
+}
+.contact-page form {
+  width: 75%;
+  margin: 0 auto;
+}
+.contact-page .wrapper{
+  width: 100%;
+}
+.contact-page table {
+  width: 98vw; 
+}
+.contact-page .inner-border {
+  font-size: 12px;
+}
+.contact-page footer{
+  width: 95%;
+}
+.contact-page .page-footer{
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.contact-page .footer-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-page .footer-left h3{
+  margin-top: 10px;
+}
+.contact-page .footer-left p{
+  margin-top: 5px;
+}
+.contact-page .footer-right{
+  min-width: auto;
+  text-align: center;
+}
+.contact-page .subscribe-icon{
+  width: 10%;
+}
+.contact-page .subscribe input {
+  width: 50%;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.contact-page .subscribe button{
+  width: 36%;
+  font-size: 12px;
+}
+}
+
+@media (orientation: landscape) and (max-height: 750px) {
+  .contact-page main {
+  height: auto;
+  align-content: center;
+}
+.contact-page .page-footer{
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.contact-page .footer-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}

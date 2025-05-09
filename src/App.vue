@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header>
+        <div class="header-content">
+          <h1 class="title">Sprint Sports Co.</h1>
+          <nav class="menu">
+            <ul>
+              <li><router-link to="/">HOME</router-link></li>
+              <li><router-link to="/about">ABOUT</router-link></li>
+              <li><router-link to="/store">STORE</router-link></li>
+              <li><router-link to="/contact">CONTACT</router-link></li>
+              <li>
+                <img :src="userIcon" alt="User Icon" height="20" width="20" />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+  <router-view />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import userIcon from '@/assets/img/UserIcon.png'
+</script>
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script>
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '@/assets/headerStyle.css';
 </style>

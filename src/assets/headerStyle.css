@@ -1,0 +1,74 @@
+/* Стили шапки и меню (часть из твоего CSS) */
+header {
+    background-color: #ffffff;
+    padding-top: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    font-family: Signika Negative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title {
+    font-family: Signika Negative;
+    font-weight: lighter;
+    color: #6e0b15;
+    font-size: 35px;
+    margin: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li {
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #a56f59;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: #6e0b15;
+}
+
+@media (max-width: 615px) {
+    .header-content {
+        flex-direction: column;          
+    }
+
+    .menu ul {        
+        justify-content: center;
+        margin-top: 12px;
+        gap: 8%;
+    }
+
+    .menu ul li {
+        margin-left: 0;                  
+        margin-bottom: 8px;             
+    }
+
+    .menu ul li a {
+        font-size: 16px;
+    }
+
+    .menu ul img {                 
+        margin-bottom: 0px;                
+    }
+    .title {
+        text-align: center;              
+        font-size: 35px;
+    }
+}
