@@ -1,72 +1,230 @@
-.about-page {
-  padding: 20px;
-}
-html, body {
-  margin: 0;
-  height: 100%;
+body {
+  margin: 0;         /* светлый фон всей секции (по желанию) */
 }
 
-/* Отступы вокруг селектов и полей */
-.about-page select,
-.about-page input[type="text"],
-.about-page input[type="number"] {
-  margin-left: 8px;
+/* Карточка контейнера */
+.about-page .inner-container {
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 15px;
 }
 
-/* Сброс стилевых маркеров и отступов */
-.about-page .order-list {
+/* Question Card */
+.about-page .question-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform .2s, box-shadow .2s;
+}
+.about-page .question-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Заголовок вопроса */
+.about-page .question-title {
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 16px;
+  position: relative;
+}
+.about-page .question-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #f4623a;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Список внутри карточки */
+.about-page .question-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
-
-/* Вертикальный список с флекс-раскладкой и равными отступами */
-.about-page .order-list li {
+.about-page .question-list li {
   display: flex;
-  justify-self: start;
   align-items: center;
-  margin-bottom: 8px;
+}
+.about-page .question-label {
+  flex: 1;
+  font-weight: 500;
+  color: #555;
 }
 
-.about-page .buttonplace {
-  display: flex;
-  flex-direction: column;
+/* Селект и инпут стили */
+.about-page .question-select,
+.about-page .question-input {
+  flex: 2;
+  padding: 8px 10px; 
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color .2s;
 }
-/* Кнопка отправки */
-.about-page button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.about-page .question-select:focus,
+.about-page .question-input:focus {
+  border-color: #f4623a;
+  outline: none;
+}
+
+/* Кнопка */
+.about-page .buttonplace {
+  text-align: center;
   margin-top: 16px;
 }
-
-/* Сообщения об ошибке */
-.about-page .error {
-  color: #e11d48;
-  margin-top: 4px;
+.about-page .buttonplace button {
+  background: #f4623a;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.about-page .buttonplace button:hover:not(:disabled) {
+  background: #e5532b;
+}
+.about-page .buttonplace button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-/* Сообщения об успехе */
-.about-page .success {
-  color: #16a34a;
-  margin-top: 4px;
-}
-
-/* Блок с итоговым счетом */
-.about-page .result {
-  font-weight: 500;
-  margin: 12px 0;
-}
-
-/* Глобальное поздравление */
-.about-page .overall-success {
-  color: #16a34a;
-  font-weight: 600;
+/* Результат */
+.about-page .overall-result {
+  text-align: center;
+  font-size: 1.2rem;
   margin-bottom: 16px;
 }
+/* Задний фон секции */
+.about-page .hero {
+  background-image: url("@/assets/img/Background.jpg");
+  background-size: cover;
+  background-position: 0% 58%;;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 94.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* контейнер, центрируем и ограничиваем max-width */
+.about-page {
+  display: flex;
+  justify-content: center;      /* горизонтальный центр */
+  background: #f9f9f9;          /* светлый фон всей секции (по желанию) */
+}
 
-.about-page .question ul {
-  list-style: none;    
-  padding-left: 0;      
-  margin: 0;          
+/* заголовок страницы — по центру */
+.about-page h2 {
+  text-align: center;
+  color: #444955;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+/* общий отступ для параграфа */
+.about-page p {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* стили для каждого вопроса */
+.about-page .question {
+  background: #fff;
+  border: 1px solid #e2e8f0;    /* лёгкая рамка */
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+/* заголовки вопросов */
+.about-page .question h3 {
+  font-family: Signika Negative;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #444955;
+}
+
+/* универсальные стили для input / select */
+.about-page input[type="text"],
+.about-page input[type="number"],
+.about-page input[type="email"],
+.about-page select,
+.about-page textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color .2s;
+}
+.about-page input:focus,
+.about-page select:focus,
+.about-page textarea:focus {
+  border-color: #f4623a;        /* тот же оранжевый акцент */
+}
+
+/* немного пространства между списком и полем */
+.about-page .order-list li span {
+  flex: 1 0 200px;
+}
+
+/* чекбоксы с подписью */
+.about-page input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* кнопки */
+.about-page .buttonplace button {
+  background: #f4623a;          /* оранжевый из CONTACT */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background .2s;
+}
+.about-page .buttonplace button:hover:not(:disabled) {
+  background: #e5532b;
+}
+.about-page .buttonplace button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* сообщения об успехе и ошибке */
+.about-page .success {
+  color: #16a34a;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.about-page .error {
+  color: #e11d48;
+  margin-top: 8px;
+}
+
+/* итоговые блоки — большой padding и центрирование */
+.about-page .result,
+.about-page .overall-success {
+  text-align: center;
+  margin: 32px 0;
+  font-size: 1.1rem;
 }

@@ -2,6 +2,7 @@
 import { createApp } from 'vue'
 import App            from './App.vue'
 import router         from './router'
+import { IMaskDirective } from 'vue-imask';
 
 /* ───── Tippy ───── */
 import VueTippy from 'vue-tippy'          // ⬅ default-экспорт
@@ -11,24 +12,30 @@ import 'tippy.js/dist/tippy.css'
 import 'tippy.js/themes/light.css'
 import './assets/validation-theme.css'
 
-createApp(App)
+const app = createApp(App);
+app
   .use(router)
   .use(VueTippy, {
     directive: 'tippy',
     defaultProps: {
-      placement:          'left',
-      fallbackPlacements: ['bottom-start', 'top-start', 'right-start'], 
+      placement: 'left',
+      fallbackPlacements: ['bottom-start', 'top-start', 'right-start'],
       popperOptions: {
         modifiers: [
-          { name: 'flip',       options: { fallbackPlacements: ['bottom-start','top-start'] } },
+          { name: 'flip', options: { fallbackPlacements: ['bottom-start','top-start'] } },
           { name: 'preventOverflow', options: { padding: 8 } }
         ]
       },
-      maxWidth: 250,         // ограничиваем ширину тултипа
+      maxWidth: 250,
       allowHTML: false,
-      trigger:  'manual',
-      offset:   [6, 0],
-      animation:'shift-away'
+      trigger: 'manual',
+      offset: [6, 0],
+      animation: 'shift-away'
     }
-  })
-  .mount('#app')
+  });
+
+/* 3. регистрируем директиву маски */
+app.directive('imask', IMaskDirective);
+
+/* 4. монтируем */
+app.mount('#app');
